@@ -14,6 +14,9 @@
 		3EC41A311FA56E6E00BA9D45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EC41A2F1FA56E6E00BA9D45 /* LaunchScreen.storyboard */; };
 		3EC41A3C1FA56E6E00BA9D45 /* InstagramLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC41A3B1FA56E6E00BA9D45 /* InstagramLiteTests.swift */; };
 		3EC41A471FA56E6E00BA9D45 /* InstagramLiteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC41A461FA56E6E00BA9D45 /* InstagramLiteUITests.swift */; };
+		3EC41A551FA56FD500BA9D45 /* Ostetso in Resources */ = {isa = PBXBuildFile; fileRef = 3EC41A541FA56FD500BA9D45 /* Ostetso */; };
+		3EC41A591FA571AA00BA9D45 /* Ostetso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC41A581FA571AA00BA9D45 /* Ostetso.framework */; };
+		3EC41A5B1FA571E000BA9D45 /* Ostetso.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3EC41A5A1FA571E000BA9D45 /* Ostetso.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,10 @@
 		3EC41A421FA56E6E00BA9D45 /* InstagramLiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramLiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC41A461FA56E6E00BA9D45 /* InstagramLiteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramLiteUITests.swift; sourceTree = "<group>"; };
 		3EC41A481FA56E6E00BA9D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EC41A541FA56FD500BA9D45 /* Ostetso */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Ostetso; sourceTree = "<group>"; };
+		3EC41A561FA5702400BA9D45 /* OstetsoBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OstetsoBridge.h; sourceTree = "<group>"; };
+		3EC41A581FA571AA00BA9D45 /* Ostetso.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ostetso.framework; path = Ostetso/Ostetso.framework; sourceTree = "<group>"; };
+		3EC41A5A1FA571E000BA9D45 /* Ostetso.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Ostetso.bundle; path = Ostetso/Ostetso.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EC41A591FA571AA00BA9D45 /* Ostetso.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +85,13 @@
 		3EC41A1A1FA56E6D00BA9D45 = {
 			isa = PBXGroup;
 			children = (
+				3EC41A5A1FA571E000BA9D45 /* Ostetso.bundle */,
 				3EC41A251FA56E6E00BA9D45 /* InstagramLite */,
 				3EC41A3A1FA56E6E00BA9D45 /* InstagramLiteTests */,
 				3EC41A451FA56E6E00BA9D45 /* InstagramLiteUITests */,
 				3EC41A241FA56E6E00BA9D45 /* Products */,
+				3EC41A541FA56FD500BA9D45 /* Ostetso */,
+				3EC41A571FA571AA00BA9D45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +114,7 @@
 				3EC41A2D1FA56E6E00BA9D45 /* Assets.xcassets */,
 				3EC41A2F1FA56E6E00BA9D45 /* LaunchScreen.storyboard */,
 				3EC41A321FA56E6E00BA9D45 /* Info.plist */,
+				3EC41A561FA5702400BA9D45 /* OstetsoBridge.h */,
 			);
 			path = InstagramLite;
 			sourceTree = "<group>";
@@ -123,6 +135,14 @@
 				3EC41A481FA56E6E00BA9D45 /* Info.plist */,
 			);
 			path = InstagramLiteUITests;
+			sourceTree = "<group>";
+		};
+		3EC41A571FA571AA00BA9D45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EC41A581FA571AA00BA9D45 /* Ostetso.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +252,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EC41A551FA56FD500BA9D45 /* Ostetso in Resources */,
 				3EC41A311FA56E6E00BA9D45 /* LaunchScreen.storyboard in Resources */,
 				3EC41A2E1FA56E6E00BA9D45 /* Assets.xcassets in Resources */,
 				3EC41A2C1FA56E6E00BA9D45 /* Main.storyboard in Resources */,
+				3EC41A5B1FA571E000BA9D45 /* Ostetso.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,10 +436,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Ostetso",
+				);
 				INFOPLIST_FILE = InstagramLite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.osiris.InstagramLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = InstagramLite/OstetsoBridge.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,10 +454,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Ostetso",
+				);
 				INFOPLIST_FILE = InstagramLite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.osiris.InstagramLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = InstagramLite/OstetsoBridge.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
